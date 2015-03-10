@@ -1,0 +1,19 @@
+{
+  "name": "elasticsales-integration-tool",
+  "version": "2.0.0",
+  "description": "Elasticsearch integration Tool for Sales Assistant",
+  "main": "runs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinnylinck/node-fork-sample"
+  },
+  "author": "Vinicius Linck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinnylinck/node-fork-sample/issues"
+  },
+  "homepage": "https://github.com/vinnylinck/node-fork-sample"
+}
