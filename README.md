@@ -1,4 +1,4 @@
-# node-mix-sample  
+# node-freestyle-sample  
 NodeJS sample applying concepts like:
 - child/fork
 - machine state
