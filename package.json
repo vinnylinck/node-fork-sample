@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/vinnylinck/node-fork-sample",
   "dependencies": {
+    "automata": "^1.0.7",
     "bunyan": "^1.3.4",
     "cli-color": "^0.3.2",
+    "hashmap": "^2.0.1",
     "lodash": "^3.5.0"
   }
 }

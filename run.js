@@ -48,12 +48,18 @@ try {
 	gui.prepareScreen();
 
 	// initializing pipeline
-	executor.onStatusUpdate = function () {
-		console.log(arguments);
-	};
+	executor.setUpdateHook(function (id, progress, message) {
+
+		// updating gui
+		gui.printJobLine(id, progress, message, false);
+	});
 
 	// running all jobs
-	executor.run(job_list);
+	logger.info("Preparing to run ", job_list);
+	logger.debug("Running with options ", settings);
+
+	// running all
+	executor.run(job_list, settings, logger);
 
 } catch (err) {
 	console.error(err);
