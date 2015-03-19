@@ -48,10 +48,11 @@ try {
 	gui.prepareScreen();
 
 	// initializing pipeline
-	executor.setUpdateHook(function (id, progress, message) {
+	executor.setUpdateHook(function (id, progress, message, clear) {
 
 		// updating gui
-		gui.printJobLine(id, progress, message, false);
+		
+		gui.printJobLine(id, progress, message, clear);
 	});
 
 	// running all jobs
