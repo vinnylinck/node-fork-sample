@@ -18,6 +18,9 @@ var job_list = [
 ];
 
 // ****************************** MAIN  ******************************
+var PROC_RUN_STAMP = new Date().getTime(),
+	PROC_EXIT;
+
 var parameters,				// parsed parameters
 	settings,				// application settings
 	logger,					// logger object
@@ -57,8 +60,7 @@ try {
 	// initializing pipeline
 	executor.setUpdateHook(function (id, progress, message, clear) {
 
-		// updating gui
-		
+		// updating gui	
 		gui.printJobLine(id, progress, message, clear);
 	});
 
