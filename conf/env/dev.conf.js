@@ -25,7 +25,7 @@ module.exports = {
 	db: {
 		host: "10.126.41.16",
 		port: 54243,
-		name: "SalesAssistantPRDS",
+		name: "SalesAssistantPRD",
 		usr: "salesassistant",
 		pwd: "s@lesAssist@nt"
 	}	
