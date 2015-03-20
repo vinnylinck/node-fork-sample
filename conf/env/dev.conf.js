@@ -20,5 +20,13 @@ module.exports = {
 
 		// log level
 		level: "debug"
-	}
+	},
+
+	db: {
+		host: "10.126.41.16",
+		port: 54243,
+		name: "SalesAssistantPRDS",
+		usr: "salesassistant",
+		pwd: "s@lesAssist@nt"
+	}	
 };

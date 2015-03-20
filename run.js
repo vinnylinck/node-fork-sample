@@ -8,7 +8,14 @@ var executor = require("./lib/executor");
 
 
 // ****************************** JOB LIST  ******************************
-var job_list = ["global-parameters"];
+var job_list = [
+	
+	// global-parameters
+	{
+		"name": "global-parameters",
+		"dependencies": []
+	}
+];
 
 // ****************************** MAIN  ******************************
 var parameters,				// parsed parameters
