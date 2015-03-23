@@ -14,7 +14,14 @@ var job_list = [
 	{
 		"name": "global-parameters",
 		"dependencies": []
-	}
+	},
+
+	// categories
+	{
+		"name": "barcoderules",
+		"dependencies": []
+	},
+
 ];
 
 // ****************************** MAIN  ******************************
@@ -33,11 +40,21 @@ try {
 	// loading application settings file
 	settings   =  fs_helper.requireIfExists("./conf/env/" + parameters.target + ".conf.js", {});
 
+	// configuring dynamic folders
+	settings.data.datedpath = settings.data.rootpath + "/" + fs_helper.getDatedFolderName();
+	settings.data.bulkpath  = settings.data.datedpath + settings.db.name;
+
 	// basic folder structure assurance
 	areFoldersOk = fs_helper.createFolders([
 
-		// .dat files folder
+		// .dat files folder tree
 		settings.data.rootpath,
+
+		// dated folder
+		settings.data.datedpath,
+
+		// bulk file location
+		settings.data.bulkpath,	
 
 		// logging folder
 		settings.logging.rootpath

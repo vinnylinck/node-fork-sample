@@ -1,5 +1,7 @@
 /* jslint node:true */
 module.exports = {
+	// languages to work with
+	languages: [3,4],
 
 	// data saving configuration sample
 	data: {
@@ -22,11 +24,23 @@ module.exports = {
 		level: "debug"
 	},
 
+	elastic: {
+		indexPrefix: "sales"
+	},
+
 	db: {
 		host: "10.126.41.16",
 		port: 54243,
 		name: "SalesAssistantPRD",
 		usr: "salesassistant",
 		pwd: "s@lesAssist@nt"
-	}	
+	},
+
+	jobs: {
+		"barcoderules": {
+			"elastic": {
+				"type_name": "barcoderules"
+			}
+		}
+	}
 };
